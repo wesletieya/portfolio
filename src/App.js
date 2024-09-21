@@ -28,19 +28,19 @@ function App() {
         },
         {
             id: 3,
-            title: 'Project Two',
+            title: 'Project Three',
             image: 'path/to/image2.jpg',
             description: 'Description for project two.',
         },
         {
             id: 4,
-            title: 'Project Two',
+            title: 'Project Four',
             image: 'path/to/image2.jpg',
             description: 'Description for project two.',
         },
         {
             id: 5,
-            title: 'Project Two',
+            title: 'Project Five',
             image: 'path/to/image2.jpg',
             description: 'Description for project two.',
         },
