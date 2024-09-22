@@ -24,8 +24,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif; /* Apply Montserrat for logo and buttons */
 }
 
-
-
 /* App Container */
 .App {
   position: relative;
@@ -118,6 +116,7 @@ h1, h2, h3, h4, h5, h6 {
   flex: 1;
   overflow: hidden;
 }
+
 /* About Section Styles */
 .about-section {
   display: flex;
@@ -144,7 +143,6 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: row-reverse;
   overflow: hidden;
 }
-
 
 /* Keyframe Animations */
 @keyframes fadeInLeft {
@@ -177,6 +175,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   animation: fadeInLeft 2s ease forwards;
 }
+
 .content-about {
   animation: fadeInRight 2s ease forwards;
 }
@@ -193,6 +192,7 @@ h1, h2, h3, h4, h5, h6 {
   width: auto;
   object-fit: cover;
 }
+
 .image-container-about img {
   height: 550px;
   width: auto;
@@ -209,10 +209,12 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.5em;
   margin-bottom: 30px;
 }
+
 button {
   background-color: transparent;
   border: none;
 }
+
 .about-me-btn {
   text-decoration: none;
   padding: 12px 24px;
@@ -302,7 +304,6 @@ button {
   margin-bottom: 20px;
   text-align: justify;
 }
-
 
 /* Show hamburger menu on mobile */
 @media (max-width: 900px) {
@@ -399,14 +400,38 @@ button {
   padding: 20px;
 }
 
+/* Define the keyframes for the entrance effect */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at the original position */
+  }
+}
+
+/* Apply the animation to .project-container */
 .project-container {
   border: 1px solid #ccc;
   border-radius: 12px;
   width: 100%;
-  max-width: 350px; /* Let’s give the cards a flexible width */
+  max-width: 350px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  opacity: 0; /* Initially hidden */
+  animation: fadeInUp 0.8s ease forwards; /* Apply the animation */
+}
+
+/* Optionally: staggered effect for multiple project containers */
+.project-container:nth-child(odd) {
+  animation-delay: 0.2s; /* Delay for odd items */
+}
+
+.project-container:nth-child(even) {
+  animation-delay: 0.4s; /* Delay for even items */
 }
 
 .project-container:hover {
@@ -430,4 +455,26 @@ button {
   padding: 16px;
   background-color: #f9f9f9;
   text-align: center;
+}
+
+.project-link {
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.project-link a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1em;
+}
+
+.project-link a:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px); /* Adds a slight lift effect on hover */
 }

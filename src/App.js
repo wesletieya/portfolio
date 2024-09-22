@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import insat from "./insat_logo.png";
-import person from "./eya3.jpg";
+import person from "./pro_img.png";
 import me from "./me.png";
 import projectImg from "./web-design-3411373_1280.webp";
 
@@ -19,30 +19,35 @@ function App() {
             title: 'Project One',
             image: 'path/to/image1.jpg',
             description: 'Description for project one.',
+            link: 'test link'
         },
         {
             id: 2,
             title: 'Project Two',
             image: 'path/to/image2.jpg',
             description: 'Description for project two.',
+            link: 'test link'
         },
         {
             id: 3,
             title: 'Project Three',
             image: 'path/to/image2.jpg',
             description: 'Description for project two.',
+            link: 'test link'
         },
         {
             id: 4,
             title: 'Project Four',
             image: 'path/to/image2.jpg',
             description: 'Description for project two.',
+            link: 'test link'
         },
         {
             id: 5,
             title: 'Project Five',
             image: 'path/to/image2.jpg',
             description: 'Description for project two.',
+            link: 'test link'
         },
         // Add more projects as needed
     ];
@@ -128,6 +133,11 @@ function App() {
                                     </div>
                                     <div className="project-content">
                                         <p>{project.description}</p>
+                                    </div>
+                                    <div className="project-link">
+                                        <a href={project.link}>
+                                            Read more
+                                        </a>
                                     </div>
                                 </div>
                             </div>
